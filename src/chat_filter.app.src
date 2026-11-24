@@ -1,0 +1,13 @@
+{application, chat_filter, [
+    {description, "Erlang client for the Chat Filter API"},
+    {vsn, "0.1.0"},
+    {registered, []},
+    {mod, {chat_filter_app, []}},
+    {applications, [kernel, stdlib, ssl, inets, hackney, jsone]},
+    {env, [
+        {model, <<"gemini-decision-1">>},
+        {api_version, <<"v1beta">>},
+        {api_endpoint, <<"https://generativelanguage.googleapis.com">>}
+    ]},
+    {modules, []}
+]}.
